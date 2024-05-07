@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .form-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .form-container form {
+            width: 30%;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        /* Existing styles for form and input fields */
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        h2 {
+            font-family: Arial, sans-serif;
+            margin-bottom: 40px;
+        }
+
+        header {
+            height: 130px;
+            background-color: rgb(0, 60, 67);
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin: 20px auto;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        form {
+            margin: 35px;
+            margin-top: 40px;
+            width: 50%;
+            text-align: center;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+            padding: 20px;
+            border-radius: 5px;
+            background-color: rgb(227, 254, 247);
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 30px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+    <header>
+        <h1 style="text-align: center; padding-top: 35px; font-family: Arial; color:white;">Address Book</h1>
+    </header>
+</head>
+
+<body>
+
+  <div class="form-container">
+        <form action="update.php" method="post">
+            <h2>Edit Address</h2>
+            <label for="update_id">ID of record to update:</label><br>
+            <input type="text" id="update_id" name="update_id" required><br>
+            <label for="new_name">New Name:</label><br>
+            <input type="text" id="new_name" name="new_name" required><br>
+            <label for="new_age">New Age:</label><br>
+            <input type="text" id="new_age" name="new_age" required><br>
+            <label for="new_age">New Phone:</label><br>
+            <input type="text" id="new_phone" pattern="[0-9]{10}" name="new_phone" required>
+            <label for="new_age">New Address:</label><br>
+            <input type="text" id="new_address" name="new_address" required><br>
+            <input type="submit" value="Update">
+        </form>
+    </div>
+</body>
+
+</html>
